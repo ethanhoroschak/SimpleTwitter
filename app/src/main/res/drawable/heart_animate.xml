@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="true">
+    <item android:drawable="@drawable/tile000" android:duration="4" />
+    <item android:drawable="@drawable/tile001" android:duration="4" />
+    <item android:drawable="@drawable/tile002" android:duration="4" />
+    <item android:drawable="@drawable/tile003" android:duration="4" />
+    <item android:drawable="@drawable/tile004" android:duration="4" />
+    <item android:drawable="@drawable/tile005" android:duration="4" />
+    <item android:drawable="@drawable/tile006" android:duration="4" />
+    <item android:drawable="@drawable/tile007" android:duration="4" />
+    <item android:drawable="@drawable/tile008" android:duration="4" />
+    <item android:drawable="@drawable/tile009" android:duration="4" />
+    <item android:drawable="@drawable/tile010" android:duration="4" />
+    <item android:drawable="@drawable/tile011" android:duration="4" />
+    <item android:drawable="@drawable/tile012" android:duration="4" />
+    <item android:drawable="@drawable/tile013" android:duration="4" />
+    <item android:drawable="@drawable/tile014" android:duration="4" />
+    <item android:drawable="@drawable/tile015" android:duration="4" />
+    <item android:drawable="@drawable/tile016" android:duration="4" />
+    <item android:drawable="@drawable/tile017" android:duration="4" />
+    <item android:drawable="@drawable/tile018" android:duration="4" />
+    <item android:drawable="@drawable/tile019" android:duration="4" />
+    <item android:drawable="@drawable/tile020" android:duration="4" />
+    <item android:drawable="@drawable/tile021" android:duration="4" />
+    <item android:drawable="@drawable/tile022" android:duration="4" />
+    <item android:drawable="@drawable/tile023" android:duration="4" />
+    <item android:drawable="@drawable/tile024" android:duration="4" />
+    <item android:drawable="@drawable/tile025" android:duration="4" />
+    <item android:drawable="@drawable/tile026" android:duration="4" />
+    <item android:drawable="@drawable/tile027" android:duration="4" />
+    <item android:drawable="@drawable/tile028" android:duration="4" />
+</animation-list>
