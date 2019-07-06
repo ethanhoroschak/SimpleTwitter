@@ -18,7 +18,6 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.codepath.apps.restclienttemplate.models.Tweet;
@@ -71,7 +70,8 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
         // get data according to position
         final Tweet tweet = mTweets.get(position);
         // populate views according to this data
-        if (tweet != null) {
+        //if (tweet != null) {
+
             if (tweet.retweeter != null) {
                 viewHolder.ivRetweeted.setVisibility(View.VISIBLE);
                 viewHolder.tvRetweeter.setVisibility(View.VISIBLE);
@@ -120,7 +120,7 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
                 viewHolder.ivMedia.setVisibility(View.GONE);
             }
 
-            if (tweet.replyTo != "null") {
+            if (!tweet.replyTo.equals("null")) {
                 viewHolder.tvReplying.setVisibility(View.VISIBLE);
                 SpannableStringBuilder spannable = new SpannableStringBuilder("Replying to @" + tweet.replyTo);
                 spannable.setSpan(
@@ -133,7 +133,7 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
             } else {
                 viewHolder.tvReplying.setVisibility(View.GONE);
             }
-        }
+
     }
 
     // set up button animations and appropriate onclicklisteners
@@ -370,7 +370,7 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
     }
 
     // create ViewHolder class
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    public class ViewHolder extends RecyclerView.ViewHolder {
          public ImageView ivProfileImage;
          public TextView tvUserName;
          public TextView tvBody;
@@ -409,23 +409,23 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder>{
              root = itemView.findViewById(R.id.root);
          }
 
-        @Override
-        public void onClick(View v) {
-             Log.e("Click", "REEEEEEEE");
-            Toast.makeText(context, "REEE", Toast.LENGTH_SHORT).show();
-            int position = getAdapterPosition();
-            // ensure the position is in the row
-            if (position != RecyclerView.NO_POSITION) {
-                // get movie at position, wont work if static
-                Tweet tweet = mTweets.get(position);
-                // Create intent for new activity
-                Intent intent = new Intent(context, TweetDetail.class);
-                // serialize the movie using parceler, use short name as key
-                intent.putExtra(Tweet.class.getSimpleName(), Parcels.wrap(tweet));
-                // start activity
-                context.startActivity(intent);
-            }
-        }
+//        @Override
+//        public void onClick(View v) {
+//             Log.e("Click", "REEEEEEEE");
+//            Toast.makeText(context, "REEE", Toast.LENGTH_SHORT).show();
+//            int position = getAdapterPosition();
+//            // ensure the position is in the row
+//            if (position != RecyclerView.NO_POSITION) {
+//                // get movie at position, wont work if static
+//                Tweet tweet = mTweets.get(position);
+//                // Create intent for new activity
+//                Intent intent = new Intent(context, TweetDetail.class);
+//                // serialize the movie using parceler, use short name as key
+//                intent.putExtra(Tweet.class.getSimpleName(), Parcels.wrap(tweet));
+//                // start activity
+//                context.startActivity(intent);
+//            }
+//        }
     }
 
     // Parse twitter date into relative time stamp to display

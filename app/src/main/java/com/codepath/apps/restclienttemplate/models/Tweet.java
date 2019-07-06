@@ -37,7 +37,7 @@ public class Tweet {
          }
          // extract all values from JSON
          tweet.body = jsonObject.optString("full_text");
-         if (tweet.body == null) {
+         if (tweet.body.isEmpty()) {
              tweet.body = jsonObject.getString("text");
          }
 
